@@ -1,0 +1,163 @@
+
+body{
+
+
+    background-image: url("../imagenes/fondo2.jpg");
+}
+
+#add{
+    background-image: url("../imagenes/add.png");
+}
+
+#close{
+    background-image: url("../imagenes/close.png");
+}
+table.tabsB {
+    
+    border-collapse: separate;
+    width: 25em;
+    background-color: rgb(235, 235, 225);
+    box-shadow: 0 0 20px black;
+    }
+table.tabsB tbody {
+    background-color: rgb(235, 235, 225);
+    display: none;
+    }
+ 
+table.tabsB th {
+   
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    font-weight: normal;
+    cursor: pointer;
+    color: white;
+    background-color: cornflowerblue;
+    }
+table.tabsB td {
+    padding: 0.2em;
+    text-align: left;
+    vertical-align: top;
+    }
+.tabsBint {
+    height: 5em;
+    overflow: auto;
+    }
+
+table.tabsB textarea{
+    width: 747px; height: 250px;
+}
+
+#prueba{
+  background-color: white;
+  border: black 1px solid;
+  float: left;
+  
+  height: 450px;
+  width: 1060px;
+  box-shadow: 0 0 30px rgb(0, 107, 126);
+ 
+}
+
+
+#textarea1{
+
+height: 360px;
+width: 505px;
+}
+
+#tablaids{
+
+    float: left;
+    box-shadow: 0 0 20px rgb(0, 107, 126);
+    
+    
+    width: 540px;
+    height: 400px;
+    overflow-y: scroll;
+
+}
+
+
+#tablaids.misid {
+    font-family: arial, sans-serif;
+    border: 1px solid #dddddd;
+    width: 100%;
+}
+
+#parte1{
+  background-color:   rgb(235, 235, 225);
+}
+
+
+
+.cajitas{
+
+border: 1px solid #dddddd;
+text-align: left;
+padding: 8px;
+background-color: cornflowerblue;
+}
+
+#tablaids.misid td, th{
+  
+background-color:cadetblue;
+color: cornflowerblues;
+
+}
+
+#textarea2{
+    box-shadow: 0 0 10px black;
+    height: 360px;
+    width: 500px;
+    pointer-events: initial;
+     
+}
+
+#textarea3{
+    box-shadow: 0 0 10px black;
+    height: 360px;
+    width: 500px;
+    pointer-events: initial;
+     
+}
+
+#textarea1{
+    box-shadow: 0 0 10px black;
+    height: 360px;
+    width: 500px;
+    pointer-events: initial;
+     
+}
+#t4{
+    border: black 1px solid;
+    box-shadow: 0 0 30px rgb(0, 107, 126);
+}
+
+.btn{
+    background-color:lightgreen; /* For browsers that do not support gradients */
+    background-image: linear-gradient(green, lightgreen,green);  
+    border: none;
+    color: white;
+    padding: 10px 27px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+}
+
+.btn:active{
+    /*Gracias a que el elemento está en posición relativa, podemos bajarlo 4 px sin alterar el HTML*/
+    top:4px;
+    /*bajamos el tamaño de la sombra para conseguir el efecto de profundidad*/
+    -moz-box-shadow: 0px 1px 0px 0px rgb(0, 105, 202);
+    -webkit-box-shadow: 0px 1px 0px 0px rgb(0, 105, 202);
+    box-shadow: 0px 1px 0px 0px rgb(0, 105, 202);
+    }
+
+h1
+{
+    box-shadow: 0 0 10px gainsboro;
+}

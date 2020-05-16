@@ -1,0 +1,12 @@
+frontend
+
+go run index.go
+
+backend 
+
+export LD_LIBRARY_PATH=/opt/instantclient_19_6/
+
+npm run dev
+
+lsof -i:4200
+sudo kill `sudo lsof -t -i:3000`

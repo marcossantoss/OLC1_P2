@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2 0 1 7 0 0 3 2 8</title>
+    <script language="JavaScript" type="text/JavaScript" src="/scripts_app/carga_archivo.js"></script>
+   <!--<script language="JavaScript" type="text/JavaScript" src="/AnalisisLexico/Analisis_Lexico.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="/AnalisisLexico/Token_lenguaje.js"></script> --> 
+    <script language="JavaScript" type="text/JavaScript" src="/scripts_app/generar_pestanas.js"></script> 
+    <script language="JavaScript" type="text/JavaScript" src="/scripts_app/generar_pestanas.js"></script> 
+   <!-- <script language="JavaScript" type="text/JavaScript" src="/AnalisisSintactico/Analisis_sintactico.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="/AnalisisSintactico/Simbolo.js"></script> 
+    <script language="JavaScript" type="text/JavaScript" src="/AnalisisSintactico/Analisis_traduccion_PYTHON.js"></script> -->
+    <script language="JavaScript" type="text/JavaScript" src="/scripts_app/abrir_ventana.js"></script>
+    <script language="JavaScript" type="text/JavaScript" src="/jstree"></script>
+   
+    <link rel="stylesheet" type="text/css" href="/css/diseno_pestanas.css" media="screen" />
+
+</head>
+<body>
+
+<h1>B I E V E N I D O</h1>
+<p id="demo">Interprete -  A N  T E N N A E</p>
+<tr>
+    
+<!-- <td><button class="btn" onclick="verificando()">prueba</button> -->
+<td><button class="btn" onclick="guardar_archivo()">Guardar</button>
+<td><button  class="btn" onclick="guardar_como()">Guardar Como</button>
+
+ <!--<td><button class="btn" id="create" onclick="descargarHTML()">Descargar html</button> -->
+    <td><button class="btn" id="create" onclick="window.open('http://192.168.1.11:9000/jstree/', '_blank');" target="_blank">Ver arbol</button>
+    <td><button  class="btn" onclick="comparar()">Comparar Archivos </button>
+</tr>
+<tr></tr>
+<tr></tr>
+<br>
+
+<tr>
+ 
+
+   <!-- <td><button class="btn" onclick="hacer_analisis_archivo()">C# to Python</button> -->
+    <td><button class="btn" onclick="realizar_analisis()">Analizar archivo base</button> 
+    <td><button class="btn" onclick="realizar_analisisaux()">Analizar archivo copia</button> 
+    <td><button class="btn" onclick="descargarreporte()">Reporte Errores Lexicos y S</button>   
+     <!--  <td><button class="btn" onclick="nueva()">PRUEBA</button>  --> 
+     <!--  <td><button class="btn" onclick="convertir_json()">Convertir Json</button> --> 
+ 
+    
+<br>
+
+            <td><input class="btn" type="file" id="file-input"/></td>
+        
+         
+        
+   
+    </tr>
+    <br>
+    <td><button id="add"  class="btn" onclick="Generarth()">+</button></td>
+    <td><label style="color: white;">_____________________________________________________________________________</label></td> 
+    <td><button id="close" class="btn" onclick="removerVentana(pestana_actual)">X</button></td>
+    <br>
+    <br>
+    <br>
+    
+
+    <div id="tablaa">
+
+        <table class="tabsB" id="mitabla">
+          
+           
+            <thead>
+            
+                <tr id="pestanaaa">
+        
+                </tr>
+            </thead>
+          
+        </table>
+    
+    </div>
+    
+   
+
+
+    <!---------------------------------------------------------------------------->
+    <label id="posicion"> Posicion del cursor: </label>
+
+    <br>
+    <p id="demo" style="color: red;">* los siguientes reporte se muestran cuando se analice un segundo archivo </p>
+
+    <br>
+
+ 
+    <table id="parte1">
+        <p id="demo" style="color: black;">Clases Copias </p>
+
+    <td id=t3>
+
+
+
+        <div id="tablaids" >
+    
+
+            <table id="mitabladeclases" class="misids">
+   
+
+                <tr>
+
+                    <th>
+             Nombre Clase 
+
+            </th>
+
+            <th>
+             Cantidad Funciones
+            </th>
+            <th>
+             Cantidad Metodos
+            </th>
+
+            <th>
+                Total metodos y funciones
+               </th>
+            <th>
+                fila
+            </th>
+            <th>
+                columna
+            </th>
+       </tr>
+     
+
+
+
+    </table>
+
+</div>
+</td>
+
+
+
+
+<table id="parte1">
+    <p id="demo" style="color: black;">Funciones o Metodos Copias </p>
+<td id=t3>
+
+
+
+    <div id="tablaids" >
+
+
+        <table id="mitabladefunciones" class="misids">
+
+
+        <tr>
+
+     
+        <th>
+         Esto es un(a)
+        </th>
+        <th>
+        Clase , tipo , nombre
+        </th>
+
+       
+        <th>
+         parametros(tipo,nombre)
+        </th>
+        <th>
+            Count    
+            </th>
+        <th>
+            fila
+        </th>
+        <th>
+            columna
+        </th>
+   </tr>
+ 
+
+
+
+</table>
+
+</div>
+</td>
+
+
+
+<table id="parte1">
+    <p id="demo" style="color: black">Variables Copias </p>
+<td id=t3>
+
+
+
+    <div id="tablaids" >
+
+
+        <table id="mitabladevariables" class="misids">
+
+
+            <tr>
+
+                <th>
+        
+                    Es un
+        </th>
+
+        <th>
+            Clase , Metodo o funcion , tipo , nombre
+        </th>
+       
+        <th>
+            fila
+        </th>
+        <th>
+            columna
+        </th>
+   </tr>
+ 
+
+
+
+</table>
+
+</div>
+</td>
+
+
+<!-- ---------------------------------------------------------------------------------------------------->
+<td>
+
+</td>
+<!--
+<td id=t4>
+
+
+  <p id="demo">Salida Python </p>
+    <textarea id="textarea3" readonly="readonly"> </textarea>
+
+
+
+
+</td> -->
+
+</table>
+<br>
+<br>
+
+
+<!-- ------------------------------------------------------------------------------------------------------  -->
+<!--<div id="prueba">
+    <table>
+  <td id="t1">
+    <p id="demo">Salida HTML</p>
+    <textarea id="textarea1" readonly="readonly"> </textarea>
+</td>
+<td></td>
+ <td id="t2"> 
+    
+    <p id="demo">Salida JSON</p>
+    <textarea id="textarea2"> </textarea>
+
+</td>
+
+   </table>
+
+</div>
+-->
+<!-- ------------------------------------------------------------------------------------------------------ -->
+
+
+
+
+</body>
+
+
+    
+</html>
+
+

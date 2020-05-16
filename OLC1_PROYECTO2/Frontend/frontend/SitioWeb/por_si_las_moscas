@@ -1,0 +1,65 @@
+//hacer un get
+func obtener_mensaje(w http.ResponseWriter, r *http.Request) {
+
+	response, err := http.Get("http://172.17.0.1:3000/mensaje")
+	if err!= nil{
+		fmt.Println("error en la conexion del back end", err)
+	}else{
+		data, _ := ioutil.ReadAll(response.Body)
+		fmt.Println(string(data))
+
+	}
+
+	
+}
+
+
+//hacer un post
+func obtener_post(w http.ResponseWriter, r *http.Request) {
+	jsonData := map[string]string{"fristname":"Nic","lastName":"Raboy"}
+	jsonValue, _ := json.Marshal(jsonData)
+	response, err := http.Post("http://172.17.0.1:3000/post","application/json",bytes.NewBuffer(jsonValue))
+	if err!= nil{
+		fmt.Println("error en la conexion del back end", err)
+	}else{
+		data, _ := ioutil.ReadAll(response.Body)
+		fmt.Println(string(data))
+
+	}
+	
+
+} 
+
+
+
+
+
+func upload(w http.ResponseWriter, r *http.Request) {
+
+	fmt.Println("Starting the application...")
+	response, err := http.Get("http://localhost:3000/mensaje")
+	if err != nil {
+		fmt.Printf("The HTTP request failed with error %s\n", err)
+	} else {
+		data, _ := ioutil.ReadAll(response.Body)
+		fmt.Println(string(data))
+	}
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+    <form action="/upload" method="get" enctype="multipart/form-data">
+        <textarea rows="10"></textarea>
+        <br>
+        <button id="btnSend">Enviar dato</button>
+    </form>
+</body>
+</html>
